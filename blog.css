@@ -17,7 +17,7 @@ h2.blog_header, h3, h4, h5 {
 	margin-left: 25%;
 	margin-right: 5%;
 }
-p, div.list {
+p, img, div.list {
 	width: 50%;
 	margin:0;
 	word-wrap: break-word;

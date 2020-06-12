@@ -7,7 +7,45 @@
 	</head>
 	<body>
 		<header><a href="./index.html">Back</a></header>	
-		
+		<section id="expense_tracker_part1_post">
+			<h2 class="title">06/11/2020 &#8226; Expense Tracker Design</h2>
+			<p>One of the first lessons I learned in Introduction to Computer Science was to create a design before starting to code.
+			</p>
+			<h3>Goal</h3>
+			<p>A program that takes in CSV files and displays the amount of money spent on specific categories either by the month or year.</p>
+			<h3>What it needs to do:</h3>
+			<div class="list">
+				<ul>
+					<li>Take in CSV files and parse out the name of what was bought, the date, and the cost.</li>
+					<li>Identify the category that the item belongs to, and add the cost & name to the category.</li>
+					<li>Add the cost & name to the associated month. </li>
+				</ul>
+			</div>
+			<h3>The Objects</h3>
+			<img src="category.png" alt="category object">
+			</br>
+			<img src="month.png" alt="month object">
+			</br>
+			<img src="year.png" alt="year object">
+			<h4>Relationships between objects:</h4>
+			<div class="list">
+				<ul>
+					<li>Year has a Month</li>
+					<li>Month has a Category</li>
+					<li>Categories (subclass) are a Category (parent class)</li>
+					<ul>
+						<li>Categories (the subclasses) include: Groceries, Pet, Home improvement, Entertainment, Bills, Eating out, 1x Expenses, Donations, Material.</li>
+						<li>All contain the same variables and methods as their parent class (Category).
+					</ul>
+				</ul>
+			</div>
+			<h3>The Design Pattern</h3>
+			<p>Design patterns improve the quality of code by helping the outside viewer understand it. Deciding between patterns was harder than expected. Below are the 2 patterns I debated:</p></br>
+			<p>Singleton - Initially, I thought of making this project into a bank account. A single class was going to be created, a “bank” object, and the transactions were going to instantiate a new category instance which would have been added to the month object all added to the bank object. This was abandoned because there was no need for a bank object.</p></br>
+			<p>Factory - I decided on this method because there is a category with categories subclasses that need to be called. The interface calls the correct category of the transaction and the object is created. The category object will then be added to a month object, and the month object will be added to the year object. This will also allow a static variable to be used between each instantiated object of a category preventing the need to go through and add the costs of all the category transactions. </p>
+			<br>
+			<p>Now it's time to code.</p>
+		</section>
 		<section id="guinea_pig_part1_post">
 			<h2 class="title">06/02/2020 &#8226; Guinea Pig Facts Part 1</h2>
 			<p>Envisioned code stack: React frontend, Spring Boot backend, MongoDB database.</p>
