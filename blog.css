@@ -3,7 +3,7 @@ body {
 	background-color: #D3D3D3;
 }
 section {
-	margin-top: 1%;
+	margin-top: 3%;
 }
 h2.title {
 	float:left;
@@ -23,6 +23,15 @@ p, img, div.list {
 	word-wrap: break-word;
 	margin-left: 25%;
 	margin-right: 5%;
+}
+a.list {
+	width: 50%;
+	margin:0;
+	text-decoration: none;
+	word-wrap: break-word;
+	margin-left: 25%;
+	margin-right: 5%;
+}
 }
 a:link {
 	text-decoration: none;
