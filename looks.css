@@ -289,22 +289,21 @@ table.community li::before {
     display: block;
 }
 
+.proj-card {
+    margin-top: 1.25rem;
+}
+
 #projects h3 {
     font-family: 'Merriweather', serif;
     font-size: 1.1rem;
     font-weight: 700;
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 0.5%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
-
-#projects h5 {
-    display: none;
-}
-
-#projects h3 a.github-link {
+#projects h3 a {
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     font-weight: 400;
@@ -312,12 +311,71 @@ table.community li::before {
     color: #f5f3ff;
     text-decoration: none;
     transition: opacity 0.2s;
-    white-space: nowrap;
-    padding-left: 20px;
 }
 
-#projects h3 a.github-link:hover {
+#projects h3 a:hover {
     opacity: 1;
+}
+
+#projects .separator {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.6;
+    color: #f5f3ff;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.proj-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.proj-type {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #7F77DD;
+}
+
+.proj-type a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.proj-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    color: #5DCAA5;
+}
+
+.proj-status--building {
+    color: #EF9F27;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5DCAA5;
+    display: inline-block;
+}
+
+.status-dot--building {
+    background: #EF9F27;
 }
 
 #projects p {
@@ -342,6 +400,24 @@ table.community li::before {
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 99px;
+}
+
+.tag-teal   { background: #9FE1CB; color: #085041; }
+.tag-coral  { background: #F5C4B3; color: #712B13; }
+.tag-gray   { background: rgba(255,255,255,0.12); color: #f5f3ff; }
 /* ── Skills ── */
 #skills .skills_1,
 #skills .skills_2 {
